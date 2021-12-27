@@ -1,0 +1,9 @@
+---
+- hosts: "master, worker"
+  vars_prompt:
+    - name: "new_user"
+      prompt: "Account need to be create in remote server."
+      private: no
+
+  roles:
+   - create_user

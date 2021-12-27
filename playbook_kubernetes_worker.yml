@@ -1,0 +1,7 @@
+---
+- name: Transfer and execute a script.
+  hosts: worker
+  tasks:
+
+     - name: Copy and Execute the script 
+       script: /etc/ansible/script_files/kubernetes_worker.sh

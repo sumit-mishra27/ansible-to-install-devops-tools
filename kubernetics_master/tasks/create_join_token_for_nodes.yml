@@ -1,0 +1,5 @@
+---
+- name: Get the token for joining the nodes with Kuberentes master.
+  become: true
+  shell: kubeadm token create  --print-join-command
+  register: kubernetes_join_command

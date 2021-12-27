@@ -1,0 +1,4 @@
+---
+- hosts: "master, worker"
+  roles:
+   - install_docker

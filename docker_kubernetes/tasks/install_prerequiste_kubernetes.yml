@@ -1,0 +1,12 @@
+---
+- name: Installing Prerequisites for Kubernetes
+  become: true
+  apt:
+    name:
+      - apt-transport-https
+      - ca-certificates
+      - curl
+      - gnupg-agent
+      - vim
+      - software-properties-common
+    state: present

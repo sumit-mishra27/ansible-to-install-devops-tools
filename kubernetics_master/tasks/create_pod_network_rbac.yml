@@ -1,0 +1,9 @@
+---
+- name: Create Pod Network & RBAC.
+  become_user: ansible
+  become_method: sudo
+  become: yes
+  command: "{{ item }}"
+  with_items: 
+     - kubectl apply -f {{ pod_network_manifest_file }}
+     - kubectl apply -f {{ rbac_manifest_file }}

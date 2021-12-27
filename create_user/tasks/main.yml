@@ -1,0 +1,9 @@
+---
+# tasks file for create_user
+- include: create_user.yml
+- include: sudo_entry.yml
+- include: sudo_without_password.yml
+- include: setting_authorized_key_current_user_copying.yml
+- include: printing_created_user.yml
+- include: debug.yml
+

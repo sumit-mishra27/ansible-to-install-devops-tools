@@ -1,0 +1,7 @@
+---
+- name: Set authorized key for user copying it from current {{ new_user }}  user.
+  become: true
+  authorized_key:
+     user: "{{ new_user }}"
+     state: present
+     key: "{{ lookup('file', lookup('env','HOME') + '/.ssh/id_rsa.pub') }}"

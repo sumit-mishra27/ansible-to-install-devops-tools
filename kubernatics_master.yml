@@ -1,0 +1,23 @@
+---
+- hosts: master
+  remote_user: ansible
+  become: yes
+  become_method: sudo
+  become_user: root
+  gather_facts: yes
+  connection: ssh
+  vars_prompt:
+   - name: "pod_network_cidr"
+     prompt: "Enter the Pod Network CIDR, example: 192.168.100.0/24"
+     private: no
+   - name: "k8s_master_ip"
+     prompt: "Enter the Apiserver advertise address, example: 192.168.0.26"
+     private: no
+   - name: "pod_network_manifest_file"
+     prompt: "Enter the Pod network manifest file URL, Your choice could be flannel, weave or calico, etc."
+     private: no
+   - name: "rbac_manifest_file"
+     prompt: "Enter the RBAC manifest file URL"
+     private: no
+  roles: 
+   - kubernetics_master

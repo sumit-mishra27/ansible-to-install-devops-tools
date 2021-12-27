@@ -1,0 +1,6 @@
+---
+- name: Enable service docker, and enable persistently
+  become: true
+  service: 
+    name: docker
+    enabled: yes

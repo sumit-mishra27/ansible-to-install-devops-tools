@@ -1,0 +1,7 @@
+---
+# handlers file for jenkins-master
+- name: start jenkins
+  service:
+    name: jenkins
+    enabled: true
+    state: started

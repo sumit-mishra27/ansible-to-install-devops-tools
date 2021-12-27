@@ -1,0 +1,7 @@
+---
+- name: Remove Swap entry from /etc/fstab.
+  become: true
+  lineinfile:
+    dest: /etc/fstab
+    regexp: swap
+    state: absent

@@ -1,0 +1,9 @@
+---
+- name: Install Docker Engine.
+  become: true
+  apt:
+    name:
+      - docker-ce
+      - docker-ce-cli
+      - containerd.io
+    state: present

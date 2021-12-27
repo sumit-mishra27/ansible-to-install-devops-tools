@@ -1,0 +1,10 @@
+---
+- name: creating the user {{ new_user }}.
+  become: true
+  user:
+    name: "{{ new_user }}"
+    createhome: yes
+    shell: /bin/bash
+    append: yes
+    state: present
+

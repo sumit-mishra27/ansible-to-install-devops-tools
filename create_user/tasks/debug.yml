@@ -1,0 +1,4 @@
+---
+- name: debugging
+  debug:
+    msg: "{{ new_user_created.stdout_lines[0] }}"

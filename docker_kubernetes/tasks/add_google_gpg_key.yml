@@ -1,0 +1,6 @@
+---
+- name: Add Google official GPG key
+  become: true
+  apt_key:
+    url: https://packages.cloud.google.com/apt/doc/apt-key.gpg
+    state: present

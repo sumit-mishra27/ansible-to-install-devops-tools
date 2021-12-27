@@ -1,0 +1,7 @@
+---
+- hosts: "master, worker"
+  become: yes
+  become_method: sudo
+  gather_facts: yes
+  roles:
+   - docker_kubernetes

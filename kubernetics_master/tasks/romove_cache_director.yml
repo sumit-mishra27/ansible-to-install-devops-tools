@@ -1,0 +1,8 @@
+---
+- name: Remove the cache directory.
+  become_user: ansible
+  become_method: sudo
+  become: yes
+  file: 
+    path: /home/{{ ansible_user }}/.kube/cache
+    state: absent

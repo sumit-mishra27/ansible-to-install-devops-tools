@@ -1,0 +1,9 @@
+---
+- name: Installing Kubernetes Cluster Packages.
+  become: true
+  apt: 
+    name:
+      - kubeadm
+      - kubectl
+      - kubelet
+    state: present

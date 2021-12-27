@@ -1,0 +1,4 @@
+---
+- name: Make the Swap inactive
+  become: true
+  command: swapoff -a

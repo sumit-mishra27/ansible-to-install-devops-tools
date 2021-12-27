@@ -1,0 +1,9 @@
+---
+# tasks file for kubernetics_master
+- include: initializing_kubernetes_cluster.yml
+- include: create_directory_for_kube_config.yml
+- include: copying_create_kube_config.yml
+- include: romove_cache_director.yml
+- include: create_pod_network_rbac.yml
+- include: create_join_token_for_nodes.yml
+- include: copy_join_to_local.yml

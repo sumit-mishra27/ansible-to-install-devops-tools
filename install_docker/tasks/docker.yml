@@ -1,0 +1,4 @@
+---
+- name: Update apt and install docker-ce
+  apt: update_cache=yes name=docker-ce state=latest
+  become: true

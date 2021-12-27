@@ -1,0 +1,8 @@
+---
+- name: Add Kubernetes Repository
+  become: true
+  apt_repository:
+    repo: deb http://apt.kubernetes.io/ kubernetes-xenial main
+    state: present
+    filename: kubernetes
+    mode: 0600

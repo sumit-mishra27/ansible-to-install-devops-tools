@@ -1,0 +1,11 @@
+---
+- name: Create directory for kube config.
+  become_user: ansible
+  become_method: sudo
+  become: yes
+  file:
+    path: /home/{{ansible_user }}/.kube
+    state: directory
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    mode: 0755

@@ -1,0 +1,7 @@
+---
+- include: aptitude.yml
+- include: required_package.yml
+- include: docker_gpg_key.yml
+- include: docker_repository.yml
+- include: docker.yml
+- include: service.yml
